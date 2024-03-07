@@ -9,14 +9,13 @@ const { showToast: toast, ToastType, ToastPosition } = webpack.getByProps(["crea
 export const defaultSettings = {};
 export const reviewDBSettings = await settings.init("dev.wolfplugs.reviewdb", defaultSettings);
 
-
 export function showToast(message: string, type = ToastType.MESSAGE) {
+
   toast({
-      id: toast.genId(),
       message,
       type,
       options: {
-          position: ToastPosition.BOTTOM, // NOBODY LIKES TOASTS AT THE TOP
+          position: ToastPosition.BOTTOM,
       },
   });
 }

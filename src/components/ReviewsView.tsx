@@ -1,10 +1,10 @@
 import { webpack } from "replugged";
 import { React, users } from "replugged/common";
 import { FormText } from "replugged/components";
-import { reviewDBSettings } from "../utils";
-import { REVIEWS_PER_PAGE, getReviews } from "../reviewDBApi";
+import { reviewDBSettings, showToast } from "../utils";
+import { REVIEWS_PER_PAGE, addReview, getReviews } from "../reviewDBApi";
 import ReviewComponent from "./ReviewComponent";
-import { Auth } from "../auth";
+import { Auth, authorize } from "../auth";
 
 
 const { Editor, Transforms } = webpack.getByProps("Editor", "Transforms"); 
