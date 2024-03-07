@@ -1,0 +1,153 @@
+[class|="section"]:not([class|="lastSection"]) + .rdb-view {
+  margin-top: 12px;
+}
+
+.rdb-badge {
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.rdb-input {
+  margin-top: 6px;
+  margin-bottom: 12px;
+  resize: none;
+  overflow: hidden;
+  background: transparent;
+  border: 1px solid var(--profile-message-input-border-color);
+}
+
+.rdb-modal-footer > div {
+  width: 100%;
+  margin: 6px 16px;
+}
+
+/* When input becomes disabled(while sending review), input adds unneccesary padding to left, this prevents it */
+.rdb-input > div > div {
+  padding-left: 0 !important;
+}
+
+.rdb-placeholder {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.rdb-input * {
+  font-size: 14px;
+}
+
+.rdb-modal-footer {
+  padding: 0;
+}
+
+.rdb-modal-footer .rdb-input {
+  margin-bottom: 0;
+  background: var(--input-background);
+}
+
+.rdb-modal-footer [class|="pageControlContainer"] {
+  margin-top: 0;
+}
+
+.rdb-modal-header {
+  flex-grow: 1;
+}
+
+.rdb-modal-reviews {
+  margin-top: 16px;
+}
+
+.rdb-review {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  padding-right: 32px !important;
+}
+
+.rdb-review:hover {
+  background: var(--background-message-hover) !important;
+  border-radius: 8px;
+}
+
+.rdb-review-comment img {
+  vertical-align: text-top;
+}
+
+.rdb-review-comment {
+  overflow-y: hidden;
+  margin-top: 1px;
+  margin-bottom: 8px;
+  color: var(--text-normal);
+  font-size: 15px;
+}
+
+.rdb-blocked-badge {
+  cursor: pointer;
+}
+
+.rdb-block-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rdb-block-modal {
+  padding: 1em;
+  display: grid;
+  gap: 0.75em;
+}
+
+.rdb-button-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media (max-width: 600px) {
+  .rdb-button-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+.rdb-block-modal-row {
+  display: flex;
+  height: 2em;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.rdb-block-modal-row img {
+  border-radius: 50%;
+  height: 2em;
+  width: 2em;
+}
+
+.rdb-block-modal img::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-modifier-accent);
+}
+
+.rdb-block-modal-username {
+  flex-grow: 1;
+}
+
+.-rdb-block-modal-unblock {
+  cursor: pointer;
+}
+
+.expandableheader-center-flex {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.expandableheader-btn {
+  all: unset;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}

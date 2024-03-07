@@ -1,20 +1,20 @@
 {
-  "id": "dev.replugged.PluginTemplate",
-  "name": "Plugin Template",
-  "description": "A plugin template",
+  "id": "dev.wolfplugs.ReviewDB",
+  "name": "ReviewDB",
+  "description": "Adds Reviews to users/servers",
   "author": {
-    "name": "replugged",
-    "discordID": "1000992611840049192",
-    "github": "replugged-org"
+    "name": "Wolfkid200444",
+    "discordID": "347096063569559553",
+    "github": "WolfPlugs"
   },
   "version": "1.0.0",
   "updater": {
     "type": "github",
-    "id": "replugged-org/plugin-template"
+    "id": "WolfPlugs/reviewdb"
   },
   "license": "MIT",
   "type": "replugged-plugin",
-  "renderer": "src/index.ts",
+  "renderer": "src/index.tsx",
   "source": "https://github.com/replugged-org/plugin-template",
   "image": ["https://i.imgur.com/14CNs3a.png?CHANGE-THIS-URL"]
 }
