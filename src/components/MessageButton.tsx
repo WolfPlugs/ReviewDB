@@ -9,7 +9,7 @@ export function DeleteButton({ onClick }: { onClick(): void; }) {
           {props => (
               <div
                   {...props}
-                  className={classes(iconClasses.button, iconClasses.dangerous)}
+                  className={(iconClasses.button, iconClasses.dangerous)}
                   onClick={onClick}
                   role="button"
               >

@@ -48,23 +48,22 @@ export default function ReviewComponent({
 
 
     return (
-      <div className={[("rdb-review"), cozyMessage, wrapper, message, groupStart, cozy]} style={
+      <div className={`rdb-review ${cozyMessage} ${wrapper} ${message} ${groupStart} ${cozy}`} style={
         {
             marginLeft: "0px",
-            paddingLeft: "52px", // wth is this
-            // nobody knows anymore
+            paddingLeft: "52px",
         }
     }>
 
         <img
-            className={[avatar, clickable]}
+            className={`${avatar} ${clickable}`}
             onClick={openModal}
             src={review.sender.profilePhoto || "/assets/1f0bfc0865d324c2587920a7d80c609b.png?size=128"}
             style={{ left: "0px", zIndex: 0 }}
         />
         <div style={{ display: "inline-flex", justifyContent: "center", alignItems: "center" }}>
             <span
-                className={[clickable, username]}
+                className={`${clickable} ${username}`}
                 style={{ color: "var(--channels-default)", fontSize: "14px" }}
                 onClick={() => openModal()}
             >
@@ -73,7 +72,7 @@ export default function ReviewComponent({
 
             {review.type === ReviewType.System && (
                 <span
-                    className={[botTag.botTagVerified, botTag.botTagRegular, botTag.botTag, botTag.px, botTag.rem]}
+                    className={`${botTag.botTagVerified} ${botTag.botTagRegular} ${botTag.botTag} ${botTag.px} ${botTag.rem}`}
                     style={{ marginLeft: "4px" }}>
                     <span className={botTag.botText}>
                         System
@@ -107,10 +106,10 @@ export default function ReviewComponent({
         </div>
 
         {review.id !== 0 && (
-            <div className={[container, isHeader, buttons]} style={{
+            <div className={`${container} ${isHeader} ${buttons}`} style={{
                 padding: "0px",
             }}>
-                <div className={[buttonClasses.wrapper, buttonsInner]} >
+                <div className={`${buttonClasses.wrapper} ${buttonsInner}`} >
                     {canReportReview(review) && <ReportButton onClick={reportRev} />}
                     {canBlockReviewAuthor(profileId, review) && <BlockButton isBlocked={isAuthorBlocked} onClick={blockReviewSender} />}
                     {canDeleteReview(profileId, review) && <DeleteButton onClick={delReview} />}
